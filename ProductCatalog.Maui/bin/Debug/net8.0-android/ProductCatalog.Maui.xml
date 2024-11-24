@@ -1,0 +1,417 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ProductCatalog.Maui</name>
+    </assembly>
+    <members>
+        <member name="T:ProductCatalog.Maui.Converters.BaseScreenTriggerConverter">
+            <inheritdoc/>
+        </member>
+        <member name="P:ProductCatalog.Maui.Converters.BaseScreenTriggerConverter.Threshold">
+            <inheritdoc cref="F:ProductCatalog.Maui.Converters.BaseScreenTriggerConverter._threshold"/>
+        </member>
+        <member name="P:ProductCatalog.Maui.Converters.BaseScreenTriggerConverter.Size">
+            <inheritdoc cref="F:ProductCatalog.Maui.Converters.BaseScreenTriggerConverter._size"/>
+        </member>
+        <member name="M:ProductCatalog.Maui.Converters.BaseScreenTriggerConverter.OnThresholdChanged(System.Double)">
+            <summary>Executes the logic for when <see cref="P:ProductCatalog.Maui.Converters.BaseScreenTriggerConverter.Threshold"/> just changed.</summary>
+            <param name="value">The new property value that was set.</param>
+            <remarks>This method is invoked right after the value of <see cref="P:ProductCatalog.Maui.Converters.BaseScreenTriggerConverter.Threshold"/> is changed.</remarks>
+        </member>
+        <member name="M:ProductCatalog.Maui.Converters.BaseScreenTriggerConverter.OnSizeChanged(ProductCatalog.Maui.Converters.BaseScreenTriggerConverter.ScreenSize)">
+            <summary>Executes the logic for when <see cref="P:ProductCatalog.Maui.Converters.BaseScreenTriggerConverter.Size"/> just changed.</summary>
+            <param name="value">The new property value that was set.</param>
+            <remarks>This method is invoked right after the value of <see cref="P:ProductCatalog.Maui.Converters.BaseScreenTriggerConverter.Size"/> is changed.</remarks>
+        </member>
+        <member name="T:ProductCatalog.Maui.ViewModels.BaseProductViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:ProductCatalog.Maui.ViewModels.BaseProductViewModel.Categories">
+            <inheritdoc cref="F:ProductCatalog.Maui.ViewModels.BaseProductViewModel._categories"/>
+        </member>
+        <member name="P:ProductCatalog.Maui.ViewModels.BaseProductViewModel.SelectedCategory">
+            <inheritdoc cref="F:ProductCatalog.Maui.ViewModels.BaseProductViewModel._selectedCategory"/>
+        </member>
+        <member name="P:ProductCatalog.Maui.ViewModels.BaseProductViewModel.SelectedCategoryName">
+            <inheritdoc cref="F:ProductCatalog.Maui.ViewModels.BaseProductViewModel._selectedCategoryName"/>
+        </member>
+        <member name="P:ProductCatalog.Maui.ViewModels.BaseProductViewModel.NewCategoryName">
+            <inheritdoc cref="F:ProductCatalog.Maui.ViewModels.BaseProductViewModel._newCategoryName"/>
+        </member>
+        <member name="P:ProductCatalog.Maui.ViewModels.BaseProductViewModel.IsNewCategoryEnabled">
+            <inheritdoc cref="F:ProductCatalog.Maui.ViewModels.BaseProductViewModel._isNewCategoryEnabled"/>
+        </member>
+        <member name="P:ProductCatalog.Maui.ViewModels.BaseProductViewModel.IsDropdownEnabled">
+            <inheritdoc cref="F:ProductCatalog.Maui.ViewModels.BaseProductViewModel._isDropdownEnabled"/>
+        </member>
+        <member name="P:ProductCatalog.Maui.ViewModels.BaseProductViewModel.IsExpanded">
+            <inheritdoc cref="F:ProductCatalog.Maui.ViewModels.BaseProductViewModel._isExpanded"/>
+        </member>
+        <member name="P:ProductCatalog.Maui.ViewModels.BaseProductViewModel.Name">
+            <inheritdoc cref="F:ProductCatalog.Maui.ViewModels.BaseProductViewModel._name"/>
+        </member>
+        <member name="P:ProductCatalog.Maui.ViewModels.BaseProductViewModel.Price">
+            <inheritdoc cref="F:ProductCatalog.Maui.ViewModels.BaseProductViewModel._price"/>
+        </member>
+        <member name="P:ProductCatalog.Maui.ViewModels.BaseProductViewModel.Quantity">
+            <inheritdoc cref="F:ProductCatalog.Maui.ViewModels.BaseProductViewModel._quantity"/>
+        </member>
+        <member name="M:ProductCatalog.Maui.ViewModels.BaseProductViewModel.OnSelectedCategoryChanged(Resources.Shared.Models.Category)">
+            <summary>Executes the logic for when <see cref="P:ProductCatalog.Maui.ViewModels.BaseProductViewModel.SelectedCategory"/> just changed.</summary>
+            <param name="value">The new property value that was set.</param>
+            <remarks>This method is invoked right after the value of <see cref="P:ProductCatalog.Maui.ViewModels.BaseProductViewModel.SelectedCategory"/> is changed.</remarks>
+        </member>
+        <member name="M:ProductCatalog.Maui.ViewModels.BaseProductViewModel.OnNewCategoryNameChanged(System.String)">
+            <summary>Executes the logic for when <see cref="P:ProductCatalog.Maui.ViewModels.BaseProductViewModel.NewCategoryName"/> just changed.</summary>
+            <param name="value">The new property value that was set.</param>
+            <remarks>This method is invoked right after the value of <see cref="P:ProductCatalog.Maui.ViewModels.BaseProductViewModel.NewCategoryName"/> is changed.</remarks>
+        </member>
+        <member name="F:ProductCatalog.Maui.ViewModels.BaseProductViewModel.selectCategoryCommand">
+            <summary>The backing field for <see cref="P:ProductCatalog.Maui.ViewModels.BaseProductViewModel.SelectCategoryCommand"/>.</summary>
+        </member>
+        <member name="P:ProductCatalog.Maui.ViewModels.BaseProductViewModel.SelectCategoryCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand`1"/> instance wrapping <see cref="M:ProductCatalog.Maui.ViewModels.BaseProductViewModel.SelectCategory(Resources.Shared.Models.Category)"/>.</summary>
+        </member>
+        <member name="T:ProductCatalog.Maui.ViewModels.CreateProductViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="F:ProductCatalog.Maui.ViewModels.CreateProductViewModel.saveCommand">
+            <summary>The backing field for <see cref="P:ProductCatalog.Maui.ViewModels.CreateProductViewModel.SaveCommand"/>.</summary>
+        </member>
+        <member name="P:ProductCatalog.Maui.ViewModels.CreateProductViewModel.SaveCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:ProductCatalog.Maui.ViewModels.CreateProductViewModel.Save"/>.</summary>
+        </member>
+        <member name="F:ProductCatalog.Maui.ViewModels.CreateProductViewModel.cancelCommand">
+            <summary>The backing field for <see cref="P:ProductCatalog.Maui.ViewModels.CreateProductViewModel.CancelCommand"/>.</summary>
+        </member>
+        <member name="P:ProductCatalog.Maui.ViewModels.CreateProductViewModel.CancelCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:ProductCatalog.Maui.ViewModels.CreateProductViewModel.Cancel"/>.</summary>
+        </member>
+        <member name="T:ProductCatalog.Maui.ViewModels.EditProductViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:ProductCatalog.Maui.ViewModels.EditProductViewModel.Product">
+            <inheritdoc cref="F:ProductCatalog.Maui.ViewModels.EditProductViewModel._product"/>
+        </member>
+        <member name="M:ProductCatalog.Maui.ViewModels.EditProductViewModel.OnProductChanged(Resources.Shared.Models.Product)">
+            <summary>Executes the logic for when <see cref="P:ProductCatalog.Maui.ViewModels.EditProductViewModel.Product"/> just changed.</summary>
+            <param name="value">The new property value that was set.</param>
+            <remarks>This method is invoked right after the value of <see cref="P:ProductCatalog.Maui.ViewModels.EditProductViewModel.Product"/> is changed.</remarks>
+        </member>
+        <member name="F:ProductCatalog.Maui.ViewModels.EditProductViewModel.saveCommand">
+            <summary>The backing field for <see cref="P:ProductCatalog.Maui.ViewModels.EditProductViewModel.SaveCommand"/>.</summary>
+        </member>
+        <member name="P:ProductCatalog.Maui.ViewModels.EditProductViewModel.SaveCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:ProductCatalog.Maui.ViewModels.EditProductViewModel.Save"/>.</summary>
+        </member>
+        <member name="F:ProductCatalog.Maui.ViewModels.EditProductViewModel.cancelCommand">
+            <summary>The backing field for <see cref="P:ProductCatalog.Maui.ViewModels.EditProductViewModel.CancelCommand"/>.</summary>
+        </member>
+        <member name="P:ProductCatalog.Maui.ViewModels.EditProductViewModel.CancelCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:ProductCatalog.Maui.ViewModels.EditProductViewModel.Cancel"/>.</summary>
+        </member>
+        <member name="T:ProductCatalog.Maui.ViewModels.ProductListViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:ProductCatalog.Maui.ViewModels.ProductListViewModel.Products">
+            <inheritdoc cref="F:ProductCatalog.Maui.ViewModels.ProductListViewModel._products"/>
+        </member>
+        <member name="P:ProductCatalog.Maui.ViewModels.ProductListViewModel.Categories">
+            <inheritdoc cref="F:ProductCatalog.Maui.ViewModels.ProductListViewModel._categories"/>
+        </member>
+        <member name="P:ProductCatalog.Maui.ViewModels.ProductListViewModel.IsIdVisible">
+            <inheritdoc cref="F:ProductCatalog.Maui.ViewModels.ProductListViewModel._isIdVisible"/>
+        </member>
+        <member name="P:ProductCatalog.Maui.ViewModels.ProductListViewModel.IsSidebarVisible">
+            <inheritdoc cref="F:ProductCatalog.Maui.ViewModels.ProductListViewModel._isSidebarVisible"/>
+        </member>
+        <member name="F:ProductCatalog.Maui.ViewModels.ProductListViewModel.navigateToCreateCommand">
+            <summary>The backing field for <see cref="P:ProductCatalog.Maui.ViewModels.ProductListViewModel.NavigateToCreateCommand"/>.</summary>
+        </member>
+        <member name="P:ProductCatalog.Maui.ViewModels.ProductListViewModel.NavigateToCreateCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:ProductCatalog.Maui.ViewModels.ProductListViewModel.NavigateToCreate"/>.</summary>
+        </member>
+        <member name="F:ProductCatalog.Maui.ViewModels.ProductListViewModel.navigateToEditCommand">
+            <summary>The backing field for <see cref="P:ProductCatalog.Maui.ViewModels.ProductListViewModel.NavigateToEditCommand"/>.</summary>
+        </member>
+        <member name="P:ProductCatalog.Maui.ViewModels.ProductListViewModel.NavigateToEditCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:ProductCatalog.Maui.ViewModels.ProductListViewModel.NavigateToEdit(Resources.Shared.Models.Product)"/>.</summary>
+        </member>
+        <member name="F:ProductCatalog.Maui.ViewModels.ProductListViewModel.deleteProductCommand">
+            <summary>The backing field for <see cref="P:ProductCatalog.Maui.ViewModels.ProductListViewModel.DeleteProductCommand"/>.</summary>
+        </member>
+        <member name="P:ProductCatalog.Maui.ViewModels.ProductListViewModel.DeleteProductCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:ProductCatalog.Maui.ViewModels.ProductListViewModel.DeleteProduct(Resources.Shared.Models.Product)"/>.</summary>
+        </member>
+        <member name="F:ProductCatalog.Maui.ViewModels.ProductListViewModel.toggleIdVisibilityCommand">
+            <summary>The backing field for <see cref="P:ProductCatalog.Maui.ViewModels.ProductListViewModel.ToggleIdVisibilityCommand"/>.</summary>
+        </member>
+        <member name="P:ProductCatalog.Maui.ViewModels.ProductListViewModel.ToggleIdVisibilityCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:ProductCatalog.Maui.ViewModels.ProductListViewModel.ToggleIdVisibility"/>.</summary>
+        </member>
+        <member name="F:ProductCatalog.Maui.ViewModels.ProductListViewModel.toggleSidebarCommand">
+            <summary>The backing field for <see cref="P:ProductCatalog.Maui.ViewModels.ProductListViewModel.ToggleSidebarCommand"/>.</summary>
+        </member>
+        <member name="P:ProductCatalog.Maui.ViewModels.ProductListViewModel.ToggleSidebarCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:ProductCatalog.Maui.ViewModels.ProductListViewModel.ToggleSidebar"/>.</summary>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_Button.TextColorTo(Microsoft.Maui.Controls.Button,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_DatePicker.TextColorTo(Microsoft.Maui.Controls.DatePicker,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_Editor.TextColorTo(Microsoft.Maui.Controls.Editor,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_Entry.TextColorTo(Microsoft.Maui.Controls.Entry,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_InputView.TextColorTo(Microsoft.Maui.Controls.InputView,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_Label.TextColorTo(Microsoft.Maui.Controls.Label,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_Picker.TextColorTo(Microsoft.Maui.Controls.Picker,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_RadioButton.TextColorTo(Microsoft.Maui.Controls.RadioButton,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_SearchBar.TextColorTo(Microsoft.Maui.Controls.SearchBar,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_TimePicker.TextColorTo(Microsoft.Maui.Controls.TimePicker,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.Messaging.__Internals.__IMessengerExtensions">
+            <summary>
+            A helper type with generated registration stubs for types implementing <see cref="T:CommunityToolkit.Mvvm.Messaging.IRecipient`1"/>.
+            </summary>
+            <inheritdoc/>
+        </member>
+        <member name="M:CommunityToolkit.Mvvm.Messaging.__Internals.__IMessengerExtensions.CreateAllMessagesRegistrator(ProductCatalog.Maui.ViewModels.ProductListViewModel)">
+            <summary>
+            Creates a message registration stub for <see cref="T:ProductCatalog.Maui.ViewModels.ProductListViewModel"/> objects.
+            </summary>
+            <param name="_">Dummy parameter, only used to disambiguate the method signature.</param>
+            <returns>A message registration stub for <see cref="T:ProductCatalog.Maui.ViewModels.ProductListViewModel"/> objects.</returns>
+        </member>
+        <member name="M:CommunityToolkit.Mvvm.Messaging.__Internals.__IMessengerExtensions.CreateAllMessagesRegistratorWithToken``1(ProductCatalog.Maui.ViewModels.ProductListViewModel)">
+            <summary>
+            Creates a message registration stub for <see cref="T:ProductCatalog.Maui.ViewModels.ProductListViewModel"/> objects.
+            </summary>
+            <typeparam name="TToken">The type of tokens that will be used to register messages.</typeparam>
+            <param name="_">Dummy parameter, only used to disambiguate the method signature.</param>
+            <returns>A message registration stub for <see cref="T:ProductCatalog.Maui.ViewModels.ProductListViewModel"/> objects.</returns>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Threshold">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Threshold" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Size">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Size" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Categories">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Categories" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.SelectedCategory">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "SelectedCategory" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.SelectedCategoryName">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "SelectedCategoryName" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.NewCategoryName">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "NewCategoryName" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsNewCategoryEnabled">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsNewCategoryEnabled" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsDropdownEnabled">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsDropdownEnabled" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsExpanded">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsExpanded" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Name">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Name" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Price">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Price" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Quantity">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Quantity" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Product">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Product" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Products">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Products" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsIdVisible">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsIdVisible" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsSidebarVisible">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsSidebarVisible" generated properties.</summary>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Threshold">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Threshold" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Size">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Size" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Categories">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Categories" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.SelectedCategory">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "SelectedCategory" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.SelectedCategoryName">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "SelectedCategoryName" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.NewCategoryName">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "NewCategoryName" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsNewCategoryEnabled">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsNewCategoryEnabled" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsDropdownEnabled">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsDropdownEnabled" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsExpanded">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsExpanded" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Name">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Name" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Price">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Price" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Quantity">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Quantity" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Product">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Product" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Products">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Products" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsIdVisible">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsIdVisible" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsSidebarVisible">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsSidebarVisible" generated properties.</summary>
+        </member>
+    </members>
+</doc>

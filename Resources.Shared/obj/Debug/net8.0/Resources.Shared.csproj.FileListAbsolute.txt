@@ -1,0 +1,12 @@
+/Users/kirubelsvedin/projects/Development/DOTNET/Programmering_med_Csharp/ProductCatalogMaui/Resources.Shared/bin/Debug/net8.0/Resources.Shared.deps.json
+/Users/kirubelsvedin/projects/Development/DOTNET/Programmering_med_Csharp/ProductCatalogMaui/Resources.Shared/bin/Debug/net8.0/Resources.Shared.dll
+/Users/kirubelsvedin/projects/Development/DOTNET/Programmering_med_Csharp/ProductCatalogMaui/Resources.Shared/bin/Debug/net8.0/Resources.Shared.pdb
+/Users/kirubelsvedin/projects/Development/DOTNET/Programmering_med_Csharp/ProductCatalogMaui/Resources.Shared/obj/Debug/net8.0/Resources.Shared.csproj.AssemblyReference.cache
+/Users/kirubelsvedin/projects/Development/DOTNET/Programmering_med_Csharp/ProductCatalogMaui/Resources.Shared/obj/Debug/net8.0/Resources.Shared.GeneratedMSBuildEditorConfig.editorconfig
+/Users/kirubelsvedin/projects/Development/DOTNET/Programmering_med_Csharp/ProductCatalogMaui/Resources.Shared/obj/Debug/net8.0/Resources.Shared.AssemblyInfoInputs.cache
+/Users/kirubelsvedin/projects/Development/DOTNET/Programmering_med_Csharp/ProductCatalogMaui/Resources.Shared/obj/Debug/net8.0/Resources.Shared.AssemblyInfo.cs
+/Users/kirubelsvedin/projects/Development/DOTNET/Programmering_med_Csharp/ProductCatalogMaui/Resources.Shared/obj/Debug/net8.0/Resources.Shared.csproj.CoreCompileInputs.cache
+/Users/kirubelsvedin/projects/Development/DOTNET/Programmering_med_Csharp/ProductCatalogMaui/Resources.Shared/obj/Debug/net8.0/Resources.Shared.dll
+/Users/kirubelsvedin/projects/Development/DOTNET/Programmering_med_Csharp/ProductCatalogMaui/Resources.Shared/obj/Debug/net8.0/refint/Resources.Shared.dll
+/Users/kirubelsvedin/projects/Development/DOTNET/Programmering_med_Csharp/ProductCatalogMaui/Resources.Shared/obj/Debug/net8.0/Resources.Shared.pdb
+/Users/kirubelsvedin/projects/Development/DOTNET/Programmering_med_Csharp/ProductCatalogMaui/Resources.Shared/obj/Debug/net8.0/ref/Resources.Shared.dll

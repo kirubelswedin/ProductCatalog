@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:customControls="clr-namespace:ProductCatalog.Maui.CustomControls"
+             xmlns:viewModels="clr-namespace:ProductCatalog.Maui.ViewModels"
+             x:Class="ProductCatalog.Maui.Views.EditProductView"
+             x:DataType="viewModels:EditProductViewModel"
+             Title="Edit Product"
+             BackgroundColor="{StaticResource BackgroundColor}"
+             Shell.NavBarIsVisible="False"
+             >
+    
+    <Grid RowDefinitions="Auto,*">
+        <!-- Top Bar -->
+        <Grid ColumnDefinitions="*,Auto" Padding="20" BackgroundColor="White">
+            <!-- Header -->
+            <Label Text="Edit Product" 
+                   Style="{StaticResource PageHeaderStyle}"/>
+           
+            <!-- Action Buttons -->
+            <HorizontalStackLayout Grid.Column="1" Spacing="10">
+                <Button Text="Cancel" Style="{StaticResource OutlineButton}"
+                        Command="{Binding CancelCommand}"/>
+                <Button Text="Save" Style="{StaticResource ActionButton}"
+                        Command="{Binding SaveCommand}"/>
+            </HorizontalStackLayout>
+        </Grid>
+
+        <!-- Form -->
+        <ScrollView Grid.Row="1">
+            <Frame Margin="20" Padding="20" HasShadow="False"
+                   BorderColor="{StaticResource BorderColor}"
+                   CornerRadius="15" BackgroundColor="White">
+                <VerticalStackLayout Spacing="15">
+                    <!-- Name -->
+                    <VerticalStackLayout>
+                        <Label Text="Product Name" FontAttributes="Bold"/>
+                        <Entry Text="{Binding Name}"
+                               Placeholder="Enter product name"
+                               PlaceholderColor="{StaticResource PlaceholderText}"/>
+                    </VerticalStackLayout>
+
+                    <!-- Price -->
+                    <VerticalStackLayout>
+                        <Label Text="Price" FontAttributes="Bold"/>
+                        <Entry Text="{Binding Price}"
+                               Placeholder="Enter price"
+                               PlaceholderColor="{StaticResource PlaceholderText}"
+                               Keyboard="Numeric"/>
+                    </VerticalStackLayout>
+
+                    <!-- Quantity -->
+                    <VerticalStackLayout>
+                        <Label Text="Quantity" FontAttributes="Bold"/>
+                        <Entry Text="{Binding Quantity}"
+                               Placeholder="Enter quantity"
+                               PlaceholderColor="{StaticResource PlaceholderText}"
+                               Keyboard="Numeric"/>
+                    </VerticalStackLayout>
+                   
+                    <!-- Category Selection -->
+                    <customControls:CategorySelectionControl/>
+                </VerticalStackLayout>
+            </Frame>
+        </ScrollView>
+    </Grid>
+</ContentPage>
