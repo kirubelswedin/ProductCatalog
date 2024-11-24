@@ -10,3 +10,4 @@
 /Users/kirubelsvedin/projects/Development/DOTNET/Programmering_med_Csharp/ProductCatalogMaui/Resources.Shared/obj/Debug/net8.0/refint/Resources.Shared.dll
 /Users/kirubelsvedin/projects/Development/DOTNET/Programmering_med_Csharp/ProductCatalogMaui/Resources.Shared/obj/Debug/net8.0/Resources.Shared.pdb
 /Users/kirubelsvedin/projects/Development/DOTNET/Programmering_med_Csharp/ProductCatalogMaui/Resources.Shared/obj/Debug/net8.0/ref/Resources.Shared.dll
+/Users/kirubelsvedin/projects/Development/DOTNET/Programmering_med_Csharp/ProductCatalogMaui/Resources.Shared/obj/Debug/net8.0/Resources.Shared.sourcelink.json
