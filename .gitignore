@@ -1,0 +1,9 @@
+/ProductCatalogMaui.sln
+bin/
+obj/
+.idea/
+.vscode/
+*.user
+*.log
+*.db
+.DS_Store

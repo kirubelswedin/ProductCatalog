@@ -47,3 +47,4 @@
 /Users/kirubelsvedin/projects/Development/DOTNET/Programmering_med_Csharp/ProductCatalogMaui/ProductCatalog.Console/obj/Debug/net8.0/ProductCatalog.Console.pdb
 /Users/kirubelsvedin/projects/Development/DOTNET/Programmering_med_Csharp/ProductCatalogMaui/ProductCatalog.Console/obj/Debug/net8.0/ProductCatalog.Console.genruntimeconfig.cache
 /Users/kirubelsvedin/projects/Development/DOTNET/Programmering_med_Csharp/ProductCatalogMaui/ProductCatalog.Console/obj/Debug/net8.0/ref/ProductCatalog.Console.dll
+/Users/kirubelsvedin/projects/Development/DOTNET/Programmering_med_Csharp/ProductCatalogMaui/ProductCatalog.Console/obj/Debug/net8.0/ProductCatalog.Console.sourcelink.json

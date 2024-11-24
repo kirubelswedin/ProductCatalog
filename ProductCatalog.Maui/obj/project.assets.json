@@ -26381,6 +26381,7 @@
       "outputPath": "/Users/kirubelsvedin/projects/Development/DOTNET/Programmering_med_Csharp/ProductCatalogMaui/ProductCatalog.Maui/obj/",
       "projectStyle": "PackageReference",
       "crossTargeting": true,
+      "UsingMicrosoftNETSdk": false,
       "configFilePaths": [
         "/Users/kirubelsvedin/.nuget/NuGet/NuGet.Config"
       ],
@@ -26390,7 +26391,6 @@
         "net8.0-maccatalyst"
       ],
       "sources": {
-        "/usr/local/share/dotnet/library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -26428,8 +26428,7 @@
         "enableAudit": "true",
         "auditLevel": "low",
         "auditMode": "all"
-      },
-      "SdkAnalysisLevel": "9.0.100"
+      }
     },
     "frameworks": {
       "net8.0-android34.0": {
