@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             xmlns:fontAwesome="clr-namespace:ProductCatalog.Maui.FontAwesome"
+             xmlns:viewModels="clr-namespace:ProductCatalog.Maui.ViewModels"
+             x:Class="ProductCatalog.Maui.CustomControls.CategorySelectionControl"
+             x:DataType="viewModels:BaseProductViewModel">
+    
+    <!-- Got som help from gpt to extract CategorySelectionControl and implement DropdownMenu -->
+    <VerticalStackLayout Spacing="5">
+        <Label Text="Category" FontAttributes="Bold"/>
+        <toolkit:Expander x:Name="CategoryExpander"
+                          IsEnabled="{Binding IsDropdownEnabled}"
+                          IsExpanded="{Binding IsExpanded}">
+            <toolkit:Expander.Header>
+                <Frame Padding="13" 
+                       BorderColor="{StaticResource BorderColor}" 
+                       CornerRadius="8">
+                    <Grid ColumnDefinitions="*, Auto" ColumnSpacing="10">
+                        <Label Text="{Binding SelectedCategoryName}"
+                               VerticalOptions="Center"
+                               TextColor="{StaticResource PrimaryText}"/>
+                        <Label Grid.Column="1"
+                               Text="{x:Static fontAwesome:FontAwesomeIcons.ChevronDown}"
+                               FontFamily="FontAwesomeSolid"
+                               FontSize="16"
+                               TextColor="{StaticResource PrimaryText}"
+                               VerticalOptions="Center"
+                               HorizontalOptions="End">
+                            <Label.Triggers>
+                                <DataTrigger TargetType="Label"
+                                             Binding="{Binding Source={x:Reference CategoryExpander}, 
+                                           Path=IsExpanded}"
+                                             Value="True">
+                                    <Setter Property="Rotation" Value="180"/>
+                                </DataTrigger>
+                            </Label.Triggers>
+                        </Label>
+                    </Grid>
+                </Frame>
+            </toolkit:Expander.Header>
+            
+            <CollectionView ItemsSource="{Binding Categories}"
+                           IsVisible="{Binding Categories.Count, Converter={StaticResource GreaterThanZeroConverter}}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Button Text="{Binding Name}"
+                                Command="{Binding Source={RelativeSource AncestorType={x:Type viewModels:BaseProductViewModel}}, Path=SelectCategoryCommand}"
+                                CommandParameter="{Binding .}"
+                                BackgroundColor="Transparent"
+                                TextColor="{StaticResource PrimaryText}"
+                                BorderColor="{StaticResource BorderColor}"
+                                BorderWidth="1"
+                                CornerRadius="8"
+                                Margin="0,2"
+                                Padding="15,10"
+                                Clicked="Button_OnClicked"
+                                HorizontalOptions="Fill"/>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </toolkit:Expander>
+        
+        <Grid RowDefinitions="Auto,Auto" Margin="0,8,0,0">
+            <Label Text="Create new category" 
+                   FontAttributes="Bold"/>
+            <Entry Grid.Row="1"
+                   Text="{Binding NewCategoryName}"
+                   IsEnabled="{Binding IsNewCategoryEnabled}"
+                   Placeholder="Enter new category name"
+                   PlaceholderColor="{StaticResource PlaceholderText}"/>
+        </Grid>
+    </VerticalStackLayout>
+</ContentView>

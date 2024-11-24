@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:models="clr-namespace:Resources.Shared.Models;assembly=Resources.Shared"
+             xmlns:viewmodel="clr-namespace:ProductCatalog.Maui.ViewModels"
+             xmlns:fontAwesome="clr-namespace:ProductCatalog.Maui.FontAwesome"
+             x:Class="ProductCatalog.Maui.Views.ProductListView"
+             x:DataType="viewmodel:ProductListViewModel"
+             BackgroundColor="{StaticResource BackgroundColor}"
+             Title="Home"
+             Shell.NavBarIsVisible="False">
+
+       <Grid x:Name="MainGrid" RowDefinitions="Auto,*" ColumnDefinitions="Auto,*">
+        <!-- Sidebar -->
+        <Grid Grid.RowSpan="2" Grid.Column="0"
+              RowDefinitions="Auto,Auto,*"
+              WidthRequest="220"
+              BackgroundColor="White"
+              Padding="15,25,15,15"
+              IsVisible="{Binding Source={x:Reference MainGrid}, Path=Width, Converter={StaticResource SidebarTrigger}}">
+            
+            <!-- Logo/App Name -->
+            <Label Grid.Row="0" Text="ProductCatalog"
+                   FontSize="24" FontAttributes="Bold" Margin="0,0,0,20"/>
+            
+            <!-- Navigation -->
+            <Grid Grid.Row="1" RowDefinitions="Auto,Auto,Auto"
+                  RowSpacing="20" Margin="0,15,0,0">
+                <!-- Home icon -->
+                <Grid Grid.Row="0" ColumnDefinitions="Auto,*" ColumnSpacing="12">
+                    <Label Grid.Column="0" Text="{x:Static fontAwesome:FontAwesomeIcons.HouseChimney}"
+                           FontFamily="FontAwesomeSolid" FontSize="20"/>
+                    <Label Grid.Column="1" Text="Home" VerticalOptions="Center"/>
+                </Grid>
+                <!-- Products icon -->
+                <Grid Grid.Row="1" ColumnDefinitions="Auto,*" ColumnSpacing="12">
+                    <Label Grid.Column="0" Text="{x:Static fontAwesome:FontAwesomeIcons.List}"
+                           FontFamily="FontAwesomeSolid" FontSize="20"/>
+                    <Label Grid.Column="1" Text="Products" VerticalOptions="Center"/>
+                </Grid>
+                <!-- Categories icon -->
+                <Grid Grid.Row="2" ColumnDefinitions="Auto,*" ColumnSpacing="12">
+                    <Label Grid.Column="0" Text="{x:Static fontAwesome:FontAwesomeIcons.LayerGroup}"
+                           FontFamily="FontAwesomeSolid" FontSize="20"/>
+                    <Label Grid.Column="1" Text="Categories" VerticalOptions="Center"/>
+                </Grid>
+            </Grid>
+        </Grid>
+
+        <!-- Main Content Area -->
+        <Grid Grid.Column="1" Grid.Row="0" Grid.RowSpan="3" RowDefinitions="Auto,Auto,*">
+            <!-- Top Bar -->
+            <Grid Grid.Row="0" ColumnDefinitions="Auto,*,Auto"
+                  Padding="10,20,20,10" BackgroundColor="White">
+                <!-- Hamburger menu -->
+                <Button Grid.Column="0" Text="{x:Static fontAwesome:FontAwesomeIcons.Bars}"
+                        FontFamily="FontAwesomeSolid" FontSize="28"
+                        BackgroundColor="Transparent" TextColor="{StaticResource PrimaryText}"
+                        VerticalOptions="Center" HorizontalOptions="Center"
+                        IsVisible="{Binding Source={x:Reference MainGrid}, Path=Width, Converter={StaticResource HamburgerTrigger}}"
+                        Command="{Binding ToggleSidebarCommand}"/>
+
+                <!-- Search Box -->
+                <Frame Grid.Column="1" CornerRadius="15" HasShadow="False"
+                       Margin="0,0,10,0" Padding="15,0" BorderColor="Transparent">
+                    <Grid ColumnDefinitions="Auto,*">
+                        <Entry Grid.Column="1" Placeholder="Search product, brand, category, etc."
+                               PlaceholderColor="{StaticResource PlaceholderText}"
+                               VerticalOptions="Center" HeightRequest="50"
+                               TextColor="{StaticResource PrimaryText}"/>
+                    </Grid>
+                </Frame>
+
+                <!-- Add Product -->
+                <Button Grid.Column="2" Margin="0,0,8,0"
+                        Text="Create Product" Command="{Binding NavigateToCreateCommand}"/>
+            </Grid>
+
+            <!-- Table Header -->
+            <Frame Grid.Row="1" BorderColor="{StaticResource BorderColor}"
+                   CornerRadius="15" BackgroundColor="White"
+                   HasShadow="False" Padding="20" Margin="20,10">
+                <Grid ColumnDefinitions="2*,2*,*,*,Auto" ColumnSpacing="20">
+                    <Label Grid.Column="0" Text="NAME" FontAttributes="Bold" VerticalOptions="Center"/>
+                    <Label Grid.Column="1" Text="CATEGORY" FontAttributes="Bold" VerticalOptions="Center"/>
+                    <Label Grid.Column="2" Text="QTY" FontAttributes="Bold" VerticalOptions="Center"/>
+                    <Label Grid.Column="3" Text="PRICE" FontAttributes="Bold" VerticalOptions="Center"/>
+                    <Label Grid.Column="4" Text="ACTIONS" FontAttributes="Bold"
+                           MinimumWidthRequest="100" VerticalOptions="Center" HorizontalOptions="Center"/>
+                </Grid>
+            </Frame>
+
+            <!-- Products List -->
+            <CollectionView Grid.Row="2" ItemsSource="{Binding Products}" Margin="20,0,20,20">
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout Orientation="Vertical" ItemSpacing="2"/>
+                </CollectionView.ItemsLayout>
+
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="models:Product">
+                        <Frame BorderColor="{StaticResource BorderColor}"
+                               CornerRadius="15" BackgroundColor="White"
+                               HasShadow="False" Padding="20">
+                            <Grid ColumnDefinitions="2*,2*,*,*,Auto" ColumnSpacing="20">
+                                <Label Grid.Column="0" Text="{Binding Name}" VerticalOptions="Center"/>
+                                <Label Grid.Column="1" Text="{Binding Category.Name}" VerticalOptions="Center"/>
+                                <Label Grid.Column="2" Text="{Binding Quantity}" VerticalOptions="Center"/>
+                                <Label Grid.Column="3" Text="{Binding FormattedPrice}" VerticalOptions="Center"/>
+
+                                <!-- Action Buttons -->
+                                <HorizontalStackLayout Grid.Column="4" Spacing="8"
+                                                     MinimumWidthRequest="100" HorizontalOptions="End">
+                                    <Button Text="{x:Static fontAwesome:FontAwesomeIcons.Pencil}"
+                                            FontFamily="FontAwesomeSolid"
+                                            HeightRequest="40" WidthRequest="40" CornerRadius="8"
+                                            Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:ProductListViewModel}}, Path=NavigateToEditCommand}"
+                                            CommandParameter="{Binding}"/>
+                                    <Button Text="{x:Static fontAwesome:FontAwesomeIcons.TrashCan}"
+                                            FontFamily="FontAwesomeSolid"
+                                            HeightRequest="40" WidthRequest="40" CornerRadius="8"
+                                            Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:ProductListViewModel}}, Path=DeleteProductCommand}"
+                                            CommandParameter="{Binding}"/>
+                                </HorizontalStackLayout>
+                            </Grid>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </Grid>
+    </Grid>
+</ContentPage>
